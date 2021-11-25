@@ -8,4 +8,6 @@
  */
 
 rootProject.name = 'ipr'
-include('app')
+include 'app'
+include 'multithrading'
+

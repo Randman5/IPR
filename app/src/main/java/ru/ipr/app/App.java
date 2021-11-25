@@ -3,10 +3,16 @@
  */
 package ru.ipr.app;
 
+import ru.multithrading.ThreadTest;
+
 public class App {
 
     public static void main(String[] args) {
-        System.out.println(MessageUtils.getMessage());
+
+        new ThreadTest().start();
+        System.out.println("HELLO WORLD!!!");
+
+
     }
 
 }
