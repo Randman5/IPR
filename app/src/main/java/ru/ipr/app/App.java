@@ -3,16 +3,12 @@
  */
 package ru.ipr.app;
 
-import ru.multithrading.ThreadTest;
+import ru.ipr.source.MainApp;
 
 public class App {
 
     public static void main(String[] args) {
-
-        new ThreadTest().start();
-        System.out.println("HELLO WORLD!!!");
-
-
+        MainApp main = new MainApp();
     }
 
 }
