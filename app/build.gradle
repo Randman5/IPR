@@ -4,7 +4,6 @@
 
 plugins {
     id 'ru.ipr.java-application-conventions'
-    id 'application'
     id 'java'
 
 }
