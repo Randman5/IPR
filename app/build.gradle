@@ -4,14 +4,20 @@
 
 plugins {
     id 'ru.ipr.java-application-conventions'
+    id 'application'
+    id 'java'
+
 }
 
-
+application {
+    mainClass = 'ru.ipr.app.App'
+}
 
 
 dependencies {
     implementation 'org.apache.commons:commons-text'
     implementation project(':multithrading')
+
 
     //  dagger
 //    implementation group: 'com.google.dagger', name: 'dagger', version: '2.40.2'
@@ -27,3 +33,11 @@ application {
     // Define the main class for the application.
     mainClass = 'ru.ipr.app.App'
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ru.ipr.app.App'
+//        attributes "Class-Path": configurations.collect() { it.getName() }.join(" ")
+    }
+}
+

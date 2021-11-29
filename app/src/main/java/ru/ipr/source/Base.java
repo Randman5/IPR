@@ -1,18 +1,12 @@
-package ru.ipr.app;
+package ru.ipr.source;
+
 
 import ru.ipr.di.components.DaggerMainComponent;
 import ru.ipr.di.components.MainComponent;
-import ru.multithrading.ThreadTest;
-
-import javax.inject.Inject;
 
 public class Base {
 
     private MainComponent mainComponent;
-
-    public Base getContext(){
-        return this;
-    }
 
     public Base() {
 

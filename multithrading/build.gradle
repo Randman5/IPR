@@ -1,8 +1,8 @@
 plugins {
-    id 'java'
+    id 'ru.ipr.java-library-conventions'
 }
 
-version 'unspecified'
+version '1'
 
 repositories {
     mavenCentral()

@@ -3,7 +3,7 @@
  */
 package ru.ipr.app;
 
-import ru.ipr.source.MainApp;
+import ru.ipr.pointOfEntry.MainApp;
 
 public class App {
 
