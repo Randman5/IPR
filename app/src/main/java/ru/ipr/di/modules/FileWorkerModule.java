@@ -7,7 +7,7 @@ import ru.multithrading.implementation.ByteWorkerImpl;
 import javax.inject.Singleton;
 
 @Module
-public class ByteFileWorkerModule {
+public class FileWorkerModule {
 
     @Singleton
     @Provides

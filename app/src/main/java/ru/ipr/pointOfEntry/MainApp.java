@@ -8,6 +8,8 @@ import ru.multithrading.subClasses.CallbleThread;
 
 import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
 
 
 public class MainApp extends Base {
@@ -40,6 +42,8 @@ public class MainApp extends Base {
 
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             byteWorker.write(byteArrayOutputStream, text);
+
+            HashMap<String, Integer> map = new HashMap<>();
 
 
             String TextRes = byteWorker.read(text.getBytes());
