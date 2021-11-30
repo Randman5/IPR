@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 
 
 @Module
-public class FileWorkerModule {
+public class ByteWorkerModule {
 
     @Singleton
     @Provides

@@ -2,7 +2,7 @@ package ru.ipr.di.modules;
 
 import dagger.Module;
 import dagger.Provides;
-import ru.multithrading.implementation.ByteFileWorkerImpl;
+import ru.multithrading.implementation.ByteWorkerImpl;
 
 import javax.inject.Singleton;
 
@@ -11,8 +11,8 @@ public class ByteFileWorkerModule {
 
     @Singleton
     @Provides
-    ByteFileWorkerImpl byteFileWorker() {
-        return new ByteFileWorkerImpl();
+    ByteWorkerImpl byteFileWorker() {
+        return new ByteWorkerImpl();
     }
 
 }

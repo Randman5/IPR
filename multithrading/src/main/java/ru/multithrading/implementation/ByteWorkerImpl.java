@@ -1,8 +1,7 @@
 package ru.multithrading.implementation;
 
-import ru.multithrading.enums.ByteFileStringRes;
-import ru.multithrading.enums.FileStringRes;
-import ru.multithrading.interfaces.ByteFileWorker;
+import ru.multithrading.enums.StreamStringRes;
+import ru.multithrading.interfaces.ByteWorker;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -13,16 +12,16 @@ import java.io.ByteArrayOutputStream;
  * создан 30.11.2021
  */
 
-public class ByteFileWorkerImpl implements ByteFileWorker {
+public class ByteWorkerImpl implements ByteWorker {
 
 
     @Override
     public void write(ByteArrayOutputStream byteArrayOutputStream, String text) {
         byte[] buffer = text.getBytes();
-        try{
+        try {
             byteArrayOutputStream.write(buffer);
         }
-        catch(Exception ex){
+        catch (Exception ex) {
 
             System.out.println(ex.getMessage());
             return;
@@ -32,7 +31,7 @@ public class ByteFileWorkerImpl implements ByteFileWorker {
         strBuilder.append("writed: ");
         strBuilder.append(byteArrayOutputStream.toString());
         strBuilder.append(buffer.length);
-        strBuilder.append(" bytes in ");
+        strBuilder.append(" bytes");
         System.out.println(strBuilder.toString());
     }
 
@@ -47,7 +46,7 @@ public class ByteFileWorkerImpl implements ByteFileWorker {
         }
         String result = stringBuilder.toString();
         if (result.equals("")) {
-            return ByteFileStringRes.STREAM_EMPTY.getText();
+            return StreamStringRes.STREAM_EMPTY.getText();
         }
         return result;
     }

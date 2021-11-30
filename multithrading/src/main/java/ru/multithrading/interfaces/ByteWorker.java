@@ -12,7 +12,7 @@ import java.io.ByteArrayOutputStream;
  * создан 30.11.2021
  */
 
-public interface ByteFileWorker {
+public interface ByteWorker {
     /**
      * Функция записывает текст в ByteArrayOutputStream
      * @param byteArrayOutputStream пото

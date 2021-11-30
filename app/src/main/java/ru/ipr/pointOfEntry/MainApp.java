@@ -1,17 +1,13 @@
 package ru.ipr.pointOfEntry;
 
-import org.w3c.dom.Text;
 import ru.ipr.source.Base;
 import ru.multithrading.Threader;
-import ru.multithrading.implementation.ByteFileWorkerImpl;
+import ru.multithrading.implementation.ByteWorkerImpl;
 import ru.multithrading.implementation.FileWorkerImpl;
-import ru.multithrading.interfaces.FileWorker;
 import ru.multithrading.subClasses.CallbleThread;
 
 import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
 
 
 public class MainApp extends Base {
@@ -21,7 +17,7 @@ public class MainApp extends Base {
     @Inject
     public FileWorkerImpl fileWorkerImpl;
     @Inject
-    public ByteFileWorkerImpl byteFileWorker;
+    public ByteWorkerImpl byteWorker;
 
     public MainApp() {
         super();
@@ -43,10 +39,10 @@ public class MainApp extends Base {
             String text = "hello World!!!";
 
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            byteFileWorker.write(byteArrayOutputStream, text);
+            byteWorker.write(byteArrayOutputStream, text);
 
 
-            String TextRes = byteFileWorker.read(text.getBytes());
+            String TextRes = byteWorker.read(text.getBytes());
             System.out.println(TextRes);
 
             return null;
