@@ -14,14 +14,13 @@ public interface FileWorker {
      * Функция записывает текст в файл по указанному пути
      * @param path путь до файла
      * @param text текст который будет записан
-     * @return возвращает название производителя
      */
     void write(@NotNull String path, @NotNull String text);
 
     /**
      * Функция считывает текст из файл по указанному пути
      * @param path путь до файла
-     * @return возвращает название производителя
+     * @return возвращает текст считанный из файла
      */
     String read(@NotNull String path);
 }
